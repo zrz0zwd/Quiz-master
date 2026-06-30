@@ -42,6 +42,9 @@ install_source source="<your-repo>/quiz-master" scope="project" kind="skill"
 
 然后使用 `/quiz-master` 命令，内部选择三种模式。
 
+> ⚠️ **自动安装前置依赖**：安装本 Skill 时会自动安装 Anthropic 官方的 `docx` skill（用于处理 Word 文档），无需手动操作。
+> 如果你的题库已经是 Markdown 格式（`.md` / `.txt`），则不需要此依赖。
+
 ### 方式三：本地开发使用
 
 直接将 `quiz-master` 文件夹复制到 Reasonix skills 目录：
@@ -56,7 +59,8 @@ cp -r quiz-master ~/.agents/skills/
 
 ## 🔧 前置依赖
 
-- **docx-editor-cn** — 用于读取 Word 格式（.doc/.docx）的题库和参考书
+- **docx-editor-cn**（Anthropic 官方 `docx` skill）— 用于读取 Word 格式（.doc/.docx）的题库和参考书
+  - 安装本 Skill 时会自动安装此依赖
   - 如果你的题库已经是 Markdown 格式，则不需要此依赖
 
 ## 🚀 快速开始

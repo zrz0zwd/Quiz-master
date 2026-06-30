@@ -11,9 +11,16 @@
 - "模拟考试" / "综合测试" / "出模拟题"
 - 任何涉及"出题""生成试题""练习题"的请求
 
-## 前置依赖
+## 前置依赖 & 自动安装
 
-本 Skill 依赖 **docx-editor-cn** 来处理 Word 文档（.doc/.docx）的读取。如果用户提供的题库或参考书是 Word 格式，需要先调用 `/docx-editor-cn` 将其转换为 Markdown。
+本 Skill 依赖 **docx-editor-cn**（Anthropic 官方 `docx` skill）来处理 Word 文档（.doc/.docx）的读取。
+
+> ⚠️ **首次安装会自动安装依赖**：当你使用 `install_source` 安装本 Skill 时，它会通过以下命令自动安装 `docx` skill 作为前置依赖，无需手动操作：
+> ```bash
+> install_source source="https://github.com/anthropics/skills/blob/main/skills/docx/SKILL.md" scope="project" kind="skill"
+> ```
+>
+> 如果你的题库已经是 Markdown 格式（`.md` / `.txt`），则不需要此依赖。
 
 ## 快速入口（Slash Commands）
 
